@@ -18,7 +18,7 @@ LEARNING_RATE_DECAY = 0.9999
 
 # switch for detailed visualization
 # with sampled points and ML-forces
-PLOT_MORE = True
+PLOT_MORE = False
 
 
 class Screen:
@@ -191,6 +191,7 @@ def __main__():
             counter = 0
             dat = []
             while counter < 1000:
+                print(counter)
                 dat.append(snake.vertices)
                 epoch(
                     session=session, snake=snake, screen=screen,
